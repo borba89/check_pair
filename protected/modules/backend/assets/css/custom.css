@@ -1,0 +1,202 @@
+/* Write your custom CSS here */
+.modal {
+    max-height: 90%;
+}
+.hidden {
+    display: none;
+}
+.wizardTerms {
+    height: 600px;
+}
+.mn-header.navbar-fixed nav .nav-wrapper {
+    padding-left: 22px;
+}
+.selected {
+    border: 1px solid green;
+}
+.realty-item:hover {
+    cursor: pointer;
+}
+
+#backendlogo {
+    margin-top: 0.7em;
+    margin-left: -2em;
+    height: 35px;
+}
+
+.slider .indicators .indicator-item {
+    background-color: #666666;
+    border: 3px solid #ffffff;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.slider .indicators .indicator-item.active {
+    background-color: #ffffff;
+}
+.slider {
+    width: 900px;
+    margin: 0 auto;
+}
+.slider .indicators {
+    bottom: 60px;
+    z-index: 100;
+    /* text-align: left; */
+}
+.label-offer-lang{
+    display: block;
+}
+#ad-article-form .help-block.error{
+    color: #a92222;
+}
+
+.alert {
+    min-width: 150px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+.alert-success {
+    background-color: #91cf91;
+    border-color: #80c780;
+    color: #3d8b3d;
+}
+.alert-warning {
+    background-color: #ebc063;
+    border-color: #e8b64c;
+    color: #a07415;
+}
+.alert-danger {
+    background-color: #e27c79;
+    border-color: #dd6864;
+    color: #9f2723;
+}
+.alert p {
+    padding: 0;
+    margin: 0;
+}
+.alert i {
+    padding-right: 5px;
+    vertical-align: middle;
+    font-size: 24px;
+}
+.alert .close-alert {
+    -webkit-appearance: none;
+    position: relative;
+    float: right;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    color: inherit;
+    background: 0 0;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    filter: alpha(opacity=40);
+    opacity: .4;
+}
+.alert .close-alert:hover {
+    filter: alpha(opacity=70);
+    opacity: .7;
+}
+.templete_m{
+    margin: 0 auto;
+}
+input[type="checkbox"].offer-toggle{
+    position: relative;
+    left: auto;
+    opacity: 1;
+}
+.breadcrumb{
+    font-size: 14px;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;padding:.75rem 1rem;
+    margin-bottom:1rem;
+    list-style:none;
+    /*background-color:#e9ecef;*/
+    border-radius:.25rem;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    display:inline-block;
+    padding-right:.5rem;
+    padding-left:.5rem;
+    color:#868e96;content:"/";
+}.breadcrumb-item+.breadcrumb-item:hover::before{
+     text-decoration:underline;
+ }
+.breadcrumb-item+.breadcrumb-item:hover::before{
+       text-decoration:none;
+   }
+.breadcrumb-item.active{
+    color: #0277bb;
+    /*color:#868e96;*/
+}
+.type_of_currency{
+    line-height: 5;
+}
+.textarea-like-input{
+    padding-top: 10px !important;
+    padding-bottom: 9px !important;
+}
+.switch-form-control{
+    height: 60px;
+}
+.switch-form-control label{
+    margin-top: 10px;
+}
+#ad-article-form .actions.clearfix li.disabled {
+    display: none;
+}
+.fileinput.fileinput-new {
+    margin-top: 5px;
+}
+#content-block-form .file-preview-frame {
+    height: auto;
+}
+#content-block-form .file-preview-image{
+    height: auto;
+}
+.grid-view .filters td{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.grid-view .filters .filter-container input{
+    height: 1.6rem;
+    margin: 0 0 0px 0;
+}
+.grid-view-filter-custom thead{
+    border-bottom: none;
+}
+.grid-view-filter-custom thead th{
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.btn-success-custom {
+    /*background-color: #28a745;*/
+    background-color: #3f4ab2cf;
+    float: right;
+}
+.btn-success-custom:hover {
+    background-color: #3f4ab2;
+}
+.collection-no-border .collection {
+    border: none;
+}
+textarea.materialize-textarea{
+    min-height: 1.6rem;
+}
+.label_checkbox_tag {
+    font-size: 1rem !important;
+}
+#realty-tags-form .label-available-realty-type-for-tag{
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.input-field-Tags{
+    margin-top: 25px;
+}

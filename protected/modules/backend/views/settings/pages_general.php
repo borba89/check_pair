@@ -1,0 +1,201 @@
+<?php
+    $this->title = 'Настройка сайта';
+    $this->breadcrumbs=array(
+        'General Settings'=>array('admin', 'id' => Settings::GENERAL),
+        'Manage',
+    );
+/*$this->menu=array(
+    array('label'=>'Create General Setting','url'=>array('create')),
+);*/
+?>
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo Yii::app()->createUrl('/backend') ?>"><?php echo Yii::t('BackendModule.backend', 'HQ')?></a></li>
+    <li class="breadcrumb-item"><a href="<?php echo Yii::app()->createUrl('/backend/settings') ?>"><?php echo Yii::t('BackendModule.backend', 'Настройки')?></a></li>
+    <li class="breadcrumb-item active" aria-current="page"><?php echo Yii::t('BackendModule.backend', 'Страницы-сайта')?></li>
+</ol>
+
+<?php $this->widget('application.components.CmTabView', array(
+    'htmlOptions'=>array(
+        'class'=>'col s12 pages_general'
+    ),
+    'activeTab'=> $active_tab,
+    'tabs'=>array(
+        'tab1'=>array(
+            'title'=>'Стартовая',
+            'view'=>'_pages_form_view',
+            'data'=>array(
+                'bg_slider'=>$bg_slider,
+                'client_say_video_preview' => $client_say_video_preview,
+                'slider_numbers'=>$slider_numbers,
+                'title_featured_en'=>$title_featured_en,
+                'title_featured_ro'=>$title_featured_ro,
+                'title_featured_ru'=>$title_featured_ru,
+                'subtitle_featured_en'=>$subtitle_featured_en,
+                'subtitle_featured_ro'=>$subtitle_featured_ro,
+                'subtitle_featured_ru'=>$subtitle_featured_ru,
+                'title_lookup_en'=>$title_lookup_en,
+                'title_lookup_ro'=>$title_lookup_ro,
+                'title_lookup_ru'=>$title_lookup_ru,
+                'subtitle_lookup_en'=>$subtitle_lookup_en,
+                'subtitle_lookup_ro'=>$subtitle_lookup_ro,
+                'subtitle_lookup_ru'=>$subtitle_lookup_ru,
+                'title_recently_en'=>$title_recently_en,
+                'title_recently_ro'=>$title_recently_ro,
+                'title_recently_ru'=>$title_recently_ru,
+                'subtitle_recently_en'=>$subtitle_recently_en,
+                'subtitle_recently_ro'=>$subtitle_recently_ro,
+                'subtitle_recently_ru'=>$subtitle_recently_ru,
+                'title_client_say_en'=>$title_client_say_en,
+                'title_client_say_ro'=>$title_client_say_ro,
+                'title_client_say_ru'=>$title_client_say_ru,
+                'subtitle_client_say_en'=>$subtitle_client_say_en,
+                'subtitle_client_say_ro'=>$subtitle_client_say_ro,
+                'subtitle_client_say_ru'=>$subtitle_client_say_ru,
+                'client_say_video'=>$client_say_video,
+                'footer_text_en'=>$footer_text_en,
+                'footer_text_ro'=>$footer_text_ro,
+                'footer_text_ru'=>$footer_text_ru,
+                'title_partners_en'=>$title_partners_en,
+                'title_partners_ro'=>$title_partners_ro,
+                'title_partners_ru'=>$title_partners_ru,
+                'count_partners'=>$count_partners,
+                'useful_links_en'=>$useful_links_en,
+                'useful_links_ro'=>$useful_links_ro,
+                'useful_links_ru'=>$useful_links_ru,
+                'contact_us_en'=>$contact_us_en,
+                'contact_us_ro'=>$contact_us_ro,
+                'contact_us_ru'=>$contact_us_ru,
+                'title_subscribe_en'=>$title_subscribe_en,
+                'title_subscribe_ro'=>$title_subscribe_ro,
+                'title_subscribe_ru'=>$title_subscribe_ru,
+                'text_subscribe_en'=>$text_subscribe_en,
+                'text_subscribe_ro'=>$text_subscribe_ro,
+                'text_subscribe_ru'=>$text_subscribe_ru,
+                'meta_title_ru' => $meta_title_ru,
+                'meta_title_ro' => $meta_title_ro,
+                'meta_title_en' => $meta_title_en,
+                'meta_description_ru' => $meta_description_ru,
+                'meta_description_ro' => $meta_description_ro,
+                'meta_description_en' => $meta_description_en,
+                'meta_keywords_ru' => $meta_keywords_ru,
+                'meta_keywords_ro' => $meta_keywords_ro,
+                'meta_keywords_en' => $meta_keywords_en,
+            ),
+        ),
+        'tab2'=>array(
+            'title'=>'Список объявлений',
+            'view'=>'_property_form_view',
+            'data'=>array(
+                'bg_property_list'=>Yii::app()->settings->get(Settings::PAGES, 'bg_property_list'),
+                'title_property_list_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_list_en'),
+                'title_property_list_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_list_ro'),
+                'title_property_list_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_list_ru'),
+                'subtitle_property_list_en'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_property_list_en'),
+                'subtitle_property_list_ro'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_property_list_ro'),
+                'subtitle_property_list_ru'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_property_list_ru'),
+            ),
+        ),
+        'tab3'=>array(
+            'title'=> Yii::t('BackendModule.backend', 'Объект'),
+            'view'=>'_single_form_view',
+            'data'=>array(
+                'title_button_rate_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_button_rate_ru'),
+                'title_property_print_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_print_ru'),
+                'title_property_agent_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_agent_ru'),
+                'title_property_desc_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_desc_ru'),
+                'title_property_related_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_related_ru'),
+                'title_property_feat_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_feat_ru'),
+                'title_button_rate_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_button_rate_ro'),
+                'title_property_print_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_print_ro'),
+                'title_property_agent_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_agent_ro'),
+                'title_property_desc_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_desc_ro'),
+                'title_property_related_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_related_ro'),
+                'title_property_feat_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_feat_ro'),
+                'title_button_rate_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_button_rate_en'),
+                'title_property_print_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_print_en'),
+                'title_property_agent_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_agent_en'),
+                'title_property_desc_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_desc_en'),
+                'title_property_related_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_related_en'),
+                'title_property_feat_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_property_feat_en'),
+            ),
+        ),
+        'tab4'=>array(
+            'title'=>'О компании',
+            'view'=>'_about_form_view',
+            'data'=>array(
+                'bg_about'=>Yii::app()->settings->get(Settings::PAGES, 'bg_about'),
+                'bg_since'=>Yii::app()->settings->get(Settings::PAGES, 'bg_since'),
+                'title_about_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_about_en'),
+                'title_about_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_about_ro'),
+                'title_about_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_about_ru'),
+                'subtitle_about_en'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_about_en'),
+                'subtitle_about_ro'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_about_ro'),
+                'subtitle_about_ru'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_about_ru'),
+                'title_since_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_since_en'),
+                'title_since_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_since_ro'),
+                'title_since_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_since_ru'),
+                'subtitle_since_en'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_since_en'),
+                'subtitle_since_ro'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_since_ro'),
+                'subtitle_since_ru'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_since_ru'),
+            ),
+        ),
+        'tab5'=>array(
+            'title'=>'Вакансии',
+            'view'=>'_vacancy_form_view',
+            'data'=>array(
+                'bg_vacancy'=>Yii::app()->settings->get(Settings::PAGES, 'bg_vacancy'),
+                'title_vacancy_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_vacancy_en'),
+                'title_vacancy_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_vacancy_ro'),
+                'title_vacancy_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_vacancy_ru'),
+                'subtitle_vacancy_en'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_vacancy_en'),
+                'subtitle_vacancy_ro'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_vacancy_ro'),
+                'subtitle_vacancy_ru'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_vacancy_ru'),
+                'more_vacancy_ru'=>Yii::app()->settings->get(Settings::PAGES, 'more_vacancy_ru'),
+                'back_vacancy_ru'=>Yii::app()->settings->get(Settings::PAGES, 'back_vacancy_ru'),
+                'more_vacancy_ro'=>Yii::app()->settings->get(Settings::PAGES, 'more_vacancy_ro'),
+                'back_vacancy_ro'=>Yii::app()->settings->get(Settings::PAGES, 'back_vacancy_ro'),
+                'more_vacancy_en'=>Yii::app()->settings->get(Settings::PAGES, 'more_vacancy_en'),
+                'back_vacancy_en'=>Yii::app()->settings->get(Settings::PAGES, 'back_vacancy_en'),
+            ),
+        ),
+        'tab6'=>array(
+            'title'=>'Контакты',
+            'view'=>'_contact_form_view',
+            'data'=>array(
+                'bg_contact'=>Yii::app()->settings->get(Settings::PAGES, 'bg_contact'),
+                'title_contact_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_contact_en'),
+                'title_contact_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_contact_ro'),
+                'title_contact_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_contact_ru'),
+                'subtitle_contact_en'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_contact_en'),
+                'subtitle_contact_ro'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_contact_ro'),
+                'subtitle_contact_ru'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_contact_ru'),
+                'form_contact_ru'=>Yii::app()->settings->get(Settings::PAGES, 'form_contact_ru'),
+                'side_contact_ru'=>Yii::app()->settings->get(Settings::PAGES, 'side_contact_ru'),
+                'form_contact_ro'=>Yii::app()->settings->get(Settings::PAGES, 'form_contact_ro'),
+                'side_contact_ro'=>Yii::app()->settings->get(Settings::PAGES, 'side_contact_ro'),
+                'form_contact_en'=>Yii::app()->settings->get(Settings::PAGES, 'form_contact_en'),
+                'side_contact_en'=>Yii::app()->settings->get(Settings::PAGES, 'side_contact_en'),
+            ),
+        ),
+        'tab7'=>array(
+            'title'=>'Блог',
+            'view'=>'_blog_form_view',
+            'data'=>array(
+                'bg_blog'=>Yii::app()->settings->get(Settings::PAGES, 'bg_blog'),
+                'title_blog_en'=>Yii::app()->settings->get(Settings::PAGES, 'title_blog_en'),
+                'title_blog_ro'=>Yii::app()->settings->get(Settings::PAGES, 'title_blog_ro'),
+                'title_blog_ru'=>Yii::app()->settings->get(Settings::PAGES, 'title_blog_ru'),
+                'subtitle_blog_en'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_blog_en'),
+                'subtitle_blog_ro'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_blog_ro'),
+                'subtitle_blog_ru'=>Yii::app()->settings->get(Settings::PAGES, 'subtitle_blog_ru'),
+            ),
+        ),
+    ),
+)); ?>
+
+<?php Yii::app()->clientScript->registerScript('tabs', "
+$('.pages_general ul').first().find('li a').on('click', function () {
+setTimeout(function() { $(window).trigger('resize');}, 100);
+});
+  ", CClientScript::POS_READY); ?>
